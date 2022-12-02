@@ -13,7 +13,9 @@ testLoad(path.join(__dirname, 'fixtures/default.txt'), function(data){
 	data.fixtures.forEach(function (fixture){
 
 		/* generic test definition code using tape */
-		tape(fixture.header, function(t){
+		tape(fixture.header,
+		     { todo: fixture.header.includes(" XFAIL") },
+		     function(t){
 			t.plan(1);
 
 			var expected = fixture.second.text,
