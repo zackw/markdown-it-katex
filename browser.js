@@ -1,18 +1,17 @@
-var md = require('markdown-it')(),
-	mk = require('./index');
+/* eslint-env browser */
+var md = require("markdown-it")(),
+  mk = require("./index");
 
 md.use(mk);
 
-var input = document.getElementById('input'),
-	output = document.getElementById('output'),
-	button = document.getElementById('button');
+var input = document.getElementById("input"),
+  output = document.getElementById("output"),
+  button = document.getElementById("button");
 
-button.addEventListener('click', function(ev){
+button.addEventListener("click", function (_unused) {
+  var result = md.render(input.value);
 
-	var result = md.render(input.value);
-
-	output.innerHTML = result;
-
+  output.innerHTML = result;
 });
 
 /*
