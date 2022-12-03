@@ -1,11 +1,11 @@
 {
   "name": "markdown-it-katex",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Fast math support for markdown-it with KaTeX",
   "main": "index.js",
   "scripts": {
     "watch": "watchify browser.js -o bundle.js -v",
-    "test": "node test/all.js"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",

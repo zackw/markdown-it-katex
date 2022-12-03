@@ -9,7 +9,7 @@ var md = require('markdown-it')()
 /* this uses the markdown-it-testgen module to automatically generate tests
    based on an easy to read text file
  */
-testLoad(path.join(__dirname, 'fixtures/default.txt'), function(data){
+testLoad(path.join(__dirname, 'fixtures/rendering.txt'), function(data){
 	data.fixtures.forEach(function (fixture){
 
 		/* generic test definition code using tape */
